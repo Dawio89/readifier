@@ -113,7 +113,9 @@ async def parse_ban_duration(ban_duration: str) -> datetime.timedelta:
 async def add(interaction: Interaction, account_name: str, ban_duration: str = None, premier_rating: str = None, notes: str = None):
     current_time = datetime.datetime.now()
     
-    if not all(char.isalnum() or char in "_- " for char in account_name):
+    combined = str(account_name) + str(ban_duration) + str(premier_rating) + str(notes)
+
+    if not all(char.isalnum() or char in "_- " for char in combined):
         await interaction.response.send_message(ephemeral=True, content="Invalid characters are not allowed >:(")
         return
 
