@@ -14,7 +14,7 @@
 ## Commands
 
 ```/setup``` - Sets the current channel for it to use <br/>
-```/add [account_name] [expiration_date(m/h/d/y] [premier_rating(optional)]``` - Adds an account to the list<br/>
+```/add [account_name] [expiration_date(m/h/d/y) (optional)] [premier_rating(optional)] [notes(optional)]``` - Adds an account to the list<br/>
 ```/rm [account_name]``` - Removes desired account from the list<br/>
 
 ## Requirements
