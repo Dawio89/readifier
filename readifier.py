@@ -80,6 +80,10 @@ async def update_list():
 
 @client.tree.command()
 async def setup(interaction: Interaction):
+    if interaction.guild is None:
+        await interaction.response.send_message(ephemeral=True, content="This command cannot be used in DMs.") # oszku >:(
+        return
+    
     channel_id = interaction.channel.id
     Autism.channel_id = channel_id
 
